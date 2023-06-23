@@ -32,16 +32,60 @@
             border: 0px;
             color: black;
         }
+        .error{
+            color: red;
+            margin: ipx;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <div id="form-container">
         <h2>Login</h2>
-        <form action="">
+        <form action="" onsubmit="return validateFrom()">
             <input type="text" placeholder="User name" id="username"> <br>
+            <p id="userError" class="error"></p>
             <input type="password" placeholder="password" id="password"><br>
+            <p id="passError" class="error"></p>
             <input type="submit">
         </form>
     </div>
+
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let flag = 1; 
+        function validateFrom(){
+            if(username.value == ""){
+                document.getElementById("userError").innerHTML ="User Name is empty";
+                flag = 0;
+            } 
+            else if(username.value.length < 5){
+                document.getElementById("userError").innerHTML ="User Name require min 5 char";
+                flag = 0;
+            }
+            else{
+                document.getElementById("userError").innerHTML = "";
+                flag = 1;
+            }
+
+            if(password.value == ""){
+                document.getElementById("passError").innerHTML = "password is empty";
+                flag = 0;
+
+            }
+            else{
+                document.getElementById("passError").innerHTML = "";
+                flag = 1;
+            }
+            if(flag){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+    </script>
 </body>
 </html>
