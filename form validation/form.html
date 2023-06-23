@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form validation</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+        }
+        #form-container{
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+        }
+        input{
+            width: 200px;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        input[type="submit"]{
+            width: 222px;
+            background-color: aquamarine;
+            border: 0px;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div id="form-container">
         <h2>Login</h2>
         <form action="">
-            <input type="text">
-            <input type="password">
+            <input type="text" placeholder="User name" id="username"> <br>
+            <input type="password" placeholder="password" id="password"><br>
             <input type="submit">
         </form>
     </div>
