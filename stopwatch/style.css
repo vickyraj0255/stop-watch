@@ -29,10 +29,10 @@ body{
     cursor: pointer;
     border-radius: 30px;
 }
+
 #btn-container, .btn:hover{
     color: rgb(36, 126, 211);
 }
-
 #start{
     background-color: greenyellow;
 
